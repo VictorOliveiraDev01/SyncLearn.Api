@@ -76,9 +76,6 @@ public class UsuarioService {
     }
 
     public AlunoDTO findAlunoById(String id){
-        if(id.isBlank()){
-            throw new IllegalArgumentException("Id do aluno não fornecido");
-        }
 
         Aluno aluno = (Aluno) mongoEntityUtils.findUsuarioById(id, Aluno.class);
 
@@ -89,9 +86,6 @@ public class UsuarioService {
     }
 
     public ProfessorDTO findProfessorById(String id){
-        if(id.isBlank()){
-            throw new IllegalArgumentException("Id do professor não fornecido");
-        }
 
         Professor professor = (Professor) mongoEntityUtils.findUsuarioById(id, Professor.class);
 
